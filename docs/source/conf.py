@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# RadioKit Engine documentation build configuration file, created by
+# RadioKit Electron documentation build configuration file, created by
 # sphinx-quickstart on Sat Apr  2 19:51:27 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'RadioKit Engine'
+project = u'RadioKit Electron'
 copyright = u'2016, RadioKit Ltd'
 author = u'RadioKit Ltd'
 
@@ -124,7 +124,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
-#html_title = u'RadioKit Engine v1.0'
+#html_title = u'RadioKit Electron v1.0'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -206,7 +206,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'RadioKitEnginedoc'
+htmlhelp_basename = 'RadioKitElectrondoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -228,7 +228,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'RadioKitEngine.tex', u'RadioKit Engine Documentation',
+    (master_doc, 'RadioKitElectron.tex', u'RadioKit Electron Documentation',
      u'RadioKit Ltd', 'manual'),
 ]
 
@@ -258,7 +258,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'radiokitengine', u'RadioKit Engine Documentation',
+    (master_doc, 'radiokitengine', u'RadioKit Electron Documentation',
      [author], 1)
 ]
 
@@ -272,8 +272,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'RadioKitEngine', u'RadioKit Engine Documentation',
-     author, 'RadioKitEngine', 'One line description of project.',
+    (master_doc, 'RadioKitElectron', u'RadioKit Electron Documentation',
+     author, 'RadioKitElectron', 'One line description of project.',
      'Miscellaneous'),
 ]
 
