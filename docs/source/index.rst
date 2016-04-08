@@ -14,3 +14,4 @@ Contents
    getting-started
    installation
    support
+   changelog
