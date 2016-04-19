@@ -15,6 +15,11 @@ General:
 * Enabled Packet Loss Concealment while receiving audio.
 * Added IPv6 support.
 
+Android:
+
+* Keep screen on during transmission.
+* Properly ask for permissions on Android 6.
+
 1.0.1 (8 April 2016)
 ^^^^^^^^^^^^^^^^^^^^
 
