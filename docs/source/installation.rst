@@ -17,9 +17,9 @@ Patchbay
 -------------
 
 Patchbay is the place where you can connect and manage all your devices that have Electron client installed on them. To access it follow the next steps: 
-- 1. Open the RadioKit console. 
-- 2. Click on the **Electron** box. 
-- 3. Then click on the **Patchbay** tab. 
+* 1. Open the RadioKit console. 
+* 2. Click on the **Electron** box. 
+* 3. Then click on the **Patchbay** tab. 
 Here you can se the list of all your accounts. If you have mulitple accounts, select the one you 
 want to connect your device with. If you have only one account, the system will redirect you to the Patchbay of your account on its own. 
 
@@ -33,13 +33,13 @@ Add a new device in Patchbay
 In order to connect your device to the system you have to first add it to the Patchbay. In the Patchbay screen, you will see three buttons
 in the upper left corner. The buttons are: Add device, Edit device and Delete (garbage bin icon).  
 
-- 1. Click on the **Add device** button. A pop-up screen will come up asking you to name your new device. 
-- 2. Insert the name of your new device (example: Journalist one) and click the Add device button. 
+* 1. Click on the **Add device** button. A pop-up screen will come up asking you to name your new device. 
+* 2. Insert the name of your new device (example: Journalist one) and click the Add device button. 
 Another pop-up screen will come up containg the set up code for your new device as well as the download links to Electron clients. 
 
 **Bear in mind that each code is valid for only 15 minutes after which you will have to start the set up again if you need a new working code**
 
-- 3. Copy or write down your code and click Close button. Your device will now appear on the Patchbay board. It will look like a blue rectangle and it will have the name 
+* 3. Copy or write down your code and click Close button. Your device will now appear on the Patchbay board. It will look like a blue rectangle and it will have the name 
 you gave it, but **it won't be active until you put the code in the Electron client**. 
 
 Insert the Patchbay code in the Electron client
