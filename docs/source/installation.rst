@@ -41,8 +41,8 @@ Another pop-up screen will come up containg the set up code for your new device 
 
 **Bear in mind that each code is valid for only 15 minutes after which you will have to start the set up again if you need a new working code**
 
-* 3. Copy or write down your code and click Close button. Your device will now appear on the Patchbay board. It will look like a blue rectangle and it will have the name 
-you gave it, but **it won't be active until you put the code in the Electron client**. 
+* 3. Copy or write down your code and click Close button. 
+Your device will now appear on the Patchbay board. It will look like a blue rectangle and it will have the name you gave it, but **it won't be active until you put the code in the Electron client**. 
 
 Insert the Patchbay code in the Electron client
 ----------------------------------------------------
