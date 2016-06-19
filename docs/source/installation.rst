@@ -17,9 +17,11 @@ Patchbay
 -------------
 
 Patchbay is the place where you can connect and manage all your devices that have Electron client installed on them. To access it follow the next steps: 
+
 * 1. Open the RadioKit console. 
 * 2. Click on the **Electron** box. 
 * 3. Then click on the **Patchbay** tab. 
+
 Here you can se the list of all your accounts. If you have mulitple accounts, select the one you 
 want to connect your device with. If you have only one account, the system will redirect you to the Patchbay of your account on its own. 
 
