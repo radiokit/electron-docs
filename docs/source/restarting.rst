@@ -16,13 +16,10 @@ windows service manager in order to restart the application.
 
 * Log in as a user with administrative privileges
 * Press **WindowsKey+R** so "Run" window will appear
-* Type **services.msc** in the text field and click OK
-* In the Service Manager that will pop up, find **RadioKit Electron 1.2**, select
-  it and stop the service using stop button in the toolbar.
-* Delete the file `C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\radiokit-electron\\config.json`
 * In the Service Manager find **RadioKit Electron 1.2**, select
   it and start the service using restart button located in the toolbar.
 
+After a while the service should be restarted.
 
 .. toctree::
    :maxdepth: 2
