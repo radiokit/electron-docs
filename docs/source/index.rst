@@ -13,6 +13,7 @@ Contents
 
    getting-started
    installation
+   restarting
    resetting
    support
    changelog

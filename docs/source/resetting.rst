@@ -12,14 +12,14 @@ from the Patchbay in the web console.
 Windows
 -------
 
-* Log in as user with administrative privileges
+* Log in as a user with administrative privileges
 * Press **WindowsKey+R** so "Run" window will appear
 * Type **services.msc** in the text field and click OK
 * In the Service Manager that will pop up, find **RadioKit Electron 1.2**, select
-  it and stop the service using stop button in the toolbar.
+  it and stop the service using stop button located in the toolbar.
 * Delete the file `C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\radiokit-electron\\config.json`
 * In the Service Manager find **RadioKit Electron 1.2**, select
-  it and start the service using start button in the toolbar.
+  it and start the service using start button located in the toolbar.
 * Once you open http://localhost:20000 you should see password prompt exactly
   as it looked like after installing the application for the first time.
 
