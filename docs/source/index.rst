@@ -12,6 +12,7 @@ Contents
    :maxdepth: 2
 
    getting-started
+   supported-software-and-hardware
    installation
    restarting
    resetting
