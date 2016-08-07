@@ -15,5 +15,6 @@ Contents
    installation
    restarting
    resetting
+   troubleshooting
    support
    changelog
