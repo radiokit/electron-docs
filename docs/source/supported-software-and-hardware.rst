@@ -8,10 +8,10 @@ RadioKit Electron client app is supported on:
 
 * Windows 7 or newer (both 32 and 64-bit)
 * Android 4.1 or newer (ARM, ARMv7, ARM64, x86 and x86_64 processors)
+* Ubuntu 16.04 LTS (amd64)
 
 It is technically prepared to work, however not released yet for:
 
-* Ubuntu 16.04 LTS (amd64)
 * Raspbian Jessie (armhf)
 * Mac OS X (Intel 64-bit)
 * iOS
