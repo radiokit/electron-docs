@@ -1,39 +1,41 @@
 Installation
-============
-
-Download the Electron client
-----------------------------
+############
 
 Windows
-~~~~~~~
+*******
 
 Download and install the latest version of the client `here <https://packages.radiokit.org/packages/windows/electron/stable>`_.
 
 Android
-~~~~~~~
+*******
 
 Download the client `here <https://play.google.com/store/apps/details?id=org.radiokit.electron>`_.
 
 Linux (Ubuntu 16.04 64-bit)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+***************************
 
-Open terminal and type:
+1. Add repository with packages:
 ::
 
     sudo apt-get install apt-transport-https
     sudo apt-add-repository 'deb [arch=amd64] https://packages.radiokit.org/packages/linux/ubuntu xenial stable'
     sudo gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 0xD11AA80452796970
     sudo apt-get update
+
+2. Install package itself:
+::
+
     sudo apt-get install radiokit-electron-1.2
 
-If you want to start the daemon for just one time, run
+
+At this point the application is installed. If you want to start the daemon for
+just one time, run the following command from the terminal:
 ::
 
     /opt/radiokit-electron-1.2/bin/radiokit-electron-daemon-1.2
 
-
 If you want to start it with the system, and restart automatically in case
-of failure, do the following:
+of failure, please do the following:
 
 1. Create a user for the service: sudo useradd -m radiokit-electron
 2. Create a file named /etc/radiokit/electron/pulse.pa as root:
@@ -113,9 +115,9 @@ with the following contents:
     After=network.target radiokit-electron-1.2-pulseaudio.service
 
     [Service]
-    User=radiokit
-    Group=radiokit
-    WorkingDirectory=/home/radiokit
+    User=radiokit-electron
+    Group=radiokit-electron
+    WorkingDirectory=/home/radiokit-electron
     ExecStart=/opt/radiokit-electron-1.2/bin/radiokit-electron-daemon-1.2
     Environment="LD_LIBRARY_PATH=/opt/radiokit-electron-1.2/lib"
     KillMode=process
