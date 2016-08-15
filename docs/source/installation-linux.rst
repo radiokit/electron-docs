@@ -1,3 +1,4 @@
+.. _installation_linux:
 Installation on Linux
 #####################
 
@@ -36,7 +37,11 @@ Automatic starting & supervision
 If you want to start it with the system, and restart automatically it
 in case of failure, please do the following:
 
-1. Create a user for the service: sudo useradd -m radiokit-electron
+1. Create a user for the service:
+   ::
+
+        sudo useradd -m radiokit-electron
+
 2. Create a file named /etc/radiokit/electron/pulse.pa as root:
    ::
 
@@ -106,7 +111,7 @@ in case of failure, please do the following:
 
         sudo nano /lib/systemd/system/radiokit-electron-1.2-daemon.service
 
-with the following contents:
+   with the following contents:
    ::
 
         [Unit]
@@ -128,8 +133,31 @@ with the following contents:
         WantedBy=multi-user.target
         Alias=radiokit-electron-1.2.service
 
-5. Reload systemd: `sudo systemctl daemon-reload`
-6. Enable service: `sudo systemctl enable radiokit-electron-1.2-pulseaudio.service`
-7. Enable service: `sudo systemctl enable radiokit-electron-1.2-daemon.service`
-8. Start service: `sudo systemctl start radiokit-electron-1.2-pulseaudio.service`
-9. Start service: `sudo systemctl start radiokit-electron-1.2-daemon.service`
+5. Reload systemd:
+   ::
+
+       sudo systemctl daemon-reload
+
+6. Enable service:
+   ::
+
+       sudo systemctl enable radiokit-electron-1.2-pulseaudio.service
+
+7. Enable service:
+   ::
+
+       sudo systemctl enable radiokit-electron-1.2-daemon.service
+
+8. Start service:
+   ::
+
+       sudo systemctl start radiokit-electron-1.2-pulseaudio.service
+
+9. Start service:
+   ::
+
+       sudo systemctl start radiokit-electron-1.2-daemon.service
+
+From this point service should be started and supervised by the system.
+
+You can check if it is running properly by opening http://localhost:20000.

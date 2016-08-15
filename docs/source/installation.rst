@@ -15,7 +15,7 @@ Download the client `here <https://play.google.com/store/apps/details?id=org.rad
 Linux
 *****
 
-See :ref:`installation-linux`.
+See rst_tutorial_.
 
 
 
