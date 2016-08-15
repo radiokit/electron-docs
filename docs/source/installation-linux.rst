@@ -1,4 +1,5 @@
-.. _installation_linux:
+.. _installation-linux:
+
 Installation on Linux
 #####################
 
