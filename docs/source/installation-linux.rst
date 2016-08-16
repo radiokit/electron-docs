@@ -56,7 +56,7 @@ in case of failure, please do the following:
 
         .fail
 
-        load-module module-native-protocol-unix auth-group=app auth-cookie-enabled=false srbchannel=true
+        load-module module-native-protocol-unix auth-group=radiokit-electron auth-cookie-enabled=false srbchannel=true
 
         ### Automatically move streams to the default sink if the sink they are
         ### connected to dies, similar for sources
