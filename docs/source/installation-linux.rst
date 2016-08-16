@@ -3,7 +3,7 @@
 Installation on Linux
 #####################
 
-Currently the only supported distribution is Ubuntu 16.04 LTS.
+Currently the only supported distribution is Ubuntu 16.04 LTS (amd64 architecture).
 
 Installing package
 ******************
