@@ -41,7 +41,7 @@ in case of failure, please do the following:
 1. Create a user for the service:
    ::
 
-        sudo useradd -m radiokit-electron
+        sudo useradd -G audio -m radiokit-electron
 
 2. Create a file named /etc/radiokit/electron/pulse.pa as root:
    ::
@@ -57,18 +57,10 @@ in case of failure, please do the following:
         .fail
 
         load-module module-native-protocol-unix auth-group=radiokit-electron auth-cookie-enabled=false srbchannel=true
-
-        ### Automatically move streams to the default sink if the sink they are
-        ### connected to dies, similar for sources
         load-module module-rescue-streams
-
-        ### Make sure we always have a sink around, even if it is a null sink.
         load-module module-always-sink sink_name=null
-
-        ### Honour intended role device property
         load-module module-intended-roles
-
-        ### Make some devices default
+        load-module module-udev-detect
         set-default-sink null
         set-default-source null.monitor
 
