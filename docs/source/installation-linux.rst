@@ -12,8 +12,8 @@ Installing package
    ::
 
         sudo apt-get install apt-transport-https
+        sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 0xD11AA80452796970
         sudo apt-add-repository 'deb [arch=amd64] https://packages.radiokit.org/packages/linux/ubuntu xenial stable'
-        sudo gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 0xD11AA80452796970
         sudo apt-get update
 
 2. Install package itself:
