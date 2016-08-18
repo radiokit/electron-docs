@@ -21,6 +21,7 @@ Installing package
 
         sudo apt-get install radiokit-electron-1.2
 
+
 Manual starting
 ***************
 
@@ -30,7 +31,8 @@ from the terminal:
 
     /opt/radiokit-electron-1.2/bin/radiokit-electron-daemon-1.2
 
-This is however, not recommended.
+This is however, not recommended as it does not provide supervision.
+
 
 Automatic starting & supervision
 ********************************
@@ -41,13 +43,13 @@ in case of failure, please do the following:
 1. Create a user for the service:
    ::
 
-        sudo useradd -G audio -m radiokit-electron
+        sudo useradd -G audio -m radiokit
 
-2. Create a file named /etc/radiokit/electron/pulse.pa as root:
+2. Create a file named /etc/radiokit/pulse.pa as root:
    ::
 
-        sudo mkdir -p /etc/radiokit/electron/
-        sudo nano /etc/radiokit/electron/pulse.pa
+        sudo mkdir -p /etc/radiokit/
+        sudo nano /etc/radiokit/pulse.pa
 
    with the following contents:
    ::
@@ -56,7 +58,7 @@ in case of failure, please do the following:
 
         .fail
 
-        load-module module-native-protocol-unix auth-group=radiokit-electron auth-cookie-enabled=false srbchannel=true
+        load-module module-native-protocol-unix auth-group=radiokit auth-cookie-enabled=false srbchannel=true
         load-module module-rescue-streams
         load-module module-always-sink sink_name=null
         load-module module-intended-roles
@@ -65,10 +67,26 @@ in case of failure, please do the following:
         set-default-source null.monitor
 
 
-3. Create a file named /lib/systemd/system/radiokit-electron-1.2-pulseaudio.service as root:
+3. Create a file named /home/radiokit/.pulse/client.conf as root:
    ::
 
-        sudo nano /lib/systemd/system/radiokit-electron-1.2-pulseaudio.service
+        sudo mkdir -p /home/radiokit/.pulse/
+        sudo nano /home/radiokit/.pulse/client.conf
+
+   with the following contents:
+   ::
+
+        autospawn=no
+
+  and then change its ownership:
+  ::
+       sudo chown -R radiokit:radiokit /home/radiokit/.pulse
+
+
+4. Create a file named /lib/systemd/system/radiokit-pulseaudio.service as root:
+   ::
+
+        sudo nano /lib/systemd/system/radiokit-pulseaudio.service
 
    with the following contents:
    ::
@@ -79,8 +97,8 @@ in case of failure, please do the following:
         [Service]
         User=radiokit-electron
         Group=radiokit-electron
-        WorkingDirectory=/home/radiokit-electron
-        ExecStart=/opt/radiokit-electron-1.2/bin/pulseaudio -F /etc/radiokit/electron/pulse.pa -n
+        WorkingDirectory=/home/radiokit
+        ExecStart=/opt/radiokit-electron-1.2/bin/pulseaudio -F /etc/radiokit/pulse.pa -n
         Environment="LD_LIBRARY_PATH=/opt/radiokit-electron-1.2/lib"
         KillMode=process
         Restart=always
@@ -97,9 +115,9 @@ in case of failure, please do the following:
 
         [Install]
         WantedBy=multi-user.target
-        Alias=radiokit-electron-1.2-pulseaudio.service
+        Alias=radiokit-pulseaudio.service
 
-4. Create a file named /lib/systemd/system/radiokit-electron-1.2-daemon.service as root:
+5. Create a file named /lib/systemd/system/radiokit-electron-1.2-daemon.service as root:
    ::
 
         sudo nano /lib/systemd/system/radiokit-electron-1.2-daemon.service
@@ -109,12 +127,12 @@ in case of failure, please do the following:
 
         [Unit]
         Description=RadioKit Electron 1.2: Daemon
-        After=network.target radiokit-electron-1.2-pulseaudio.service
+        After=network.target radiokit-pulseaudio.service
 
         [Service]
         User=radiokit-electron
         Group=radiokit-electron
-        WorkingDirectory=/home/radiokit-electron
+        WorkingDirectory=/home/radiokit
         ExecStart=/opt/radiokit-electron-1.2/bin/radiokit-electron-daemon-1.2
         Environment="LD_LIBRARY_PATH=/opt/radiokit-electron-1.2/lib"
         KillMode=process
@@ -126,27 +144,27 @@ in case of failure, please do the following:
         WantedBy=multi-user.target
         Alias=radiokit-electron-1.2.service
 
-5. Reload systemd:
+6. Reload systemd:
    ::
 
        sudo systemctl daemon-reload
 
-6. Enable service:
+7. Enable service:
    ::
 
-       sudo systemctl enable radiokit-electron-1.2-pulseaudio.service
+       sudo systemctl enable radiokit-pulseaudio.service
 
-7. Enable service:
+8. Enable service:
    ::
 
        sudo systemctl enable radiokit-electron-1.2-daemon.service
 
-8. Start service:
+9. Start service:
    ::
 
-       sudo systemctl start radiokit-electron-1.2-pulseaudio.service
+       sudo systemctl start radiokit-pulseaudio.service
 
-9. Start service:
+10. Start service:
    ::
 
        sudo systemctl start radiokit-electron-1.2-daemon.service
