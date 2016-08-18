@@ -92,7 +92,7 @@ in case of failure, please do the following:
    ::
 
         [Unit]
-        Description=RadioKit Electron 1.2: PulseAudio
+        Description=RadioKit: PulseAudio
 
         [Service]
         User=radiokit-electron
