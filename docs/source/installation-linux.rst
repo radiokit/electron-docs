@@ -95,8 +95,8 @@ in case of failure, please do the following:
         Description=RadioKit: PulseAudio
 
         [Service]
-        User=radiokit-electron
-        Group=radiokit-electron
+        User=radiokit
+        Group=radiokit
         WorkingDirectory=/home/radiokit
         ExecStart=/opt/radiokit-electron-1.2/bin/pulseaudio -F /etc/radiokit/pulse.pa -n
         Environment="LD_LIBRARY_PATH=/opt/radiokit-electron-1.2/lib"
@@ -130,8 +130,8 @@ in case of failure, please do the following:
         After=network.target radiokit-pulseaudio.service
 
         [Service]
-        User=radiokit-electron
-        Group=radiokit-electron
+        User=radiokit
+        Group=radiokit
         WorkingDirectory=/home/radiokit
         ExecStart=/opt/radiokit-electron-1.2/bin/radiokit-electron-daemon-1.2
         Environment="LD_LIBRARY_PATH=/opt/radiokit-electron-1.2/lib"
@@ -149,22 +149,22 @@ in case of failure, please do the following:
 
        sudo systemctl daemon-reload
 
-7. Enable service:
+7. Enable service for PulseAudio sound server:
    ::
 
        sudo systemctl enable radiokit-pulseaudio.service
 
-8. Enable service:
+8. Enable service for RadioKit Electron itself:
    ::
 
        sudo systemctl enable radiokit-electron-1.2-daemon.service
 
-9. Start service:
+9. Start service for PulseAudio sound server:
    ::
 
        sudo systemctl start radiokit-pulseaudio.service
 
-10. Start service:
+10. Start service for RadioKit Electron itself:
    ::
 
        sudo systemctl start radiokit-electron-1.2-daemon.service
