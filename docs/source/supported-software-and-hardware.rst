@@ -41,13 +41,12 @@ uncommon in may radio stations and we need to ensure that these users can use
 RadioKit Electron. Even if we add support for WASAPI, ASIO at some point,
 we will provide backwards compatibility for DirectSound.
 
-Sound cards that are known to work:
+Sound cards and devices that are known to work:
 
 * ESI Juli@
-
-Sound cards that are known to cause issues in the current version:
-
 * Tascam US 2x2
+* Behringer XENYX Q1202USB
+* Behringer XENYX Q1204USB
 
 Of course we support any soundcard that is detected as Generic Audio Device
 and built-in soundcards.
