@@ -15,13 +15,14 @@ Installing package
         sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 0xD11AA80452796970
 
 2. Add repository:
+
    a) If you use Ubuntu 14.04 LTS (amd64 architecture)
       ::
 
             sudo apt-add-repository 'deb [arch=amd64] https://packages.radiokit.org/packages/linux/ubuntu trusty trusty-stable'
             sudo apt-get update
 
-   a) If you use Ubuntu 16.04 LTS (amd64 architecture)
+   b) If you use Ubuntu 16.04 LTS (amd64 architecture)
       ::
 
            sudo apt-add-repository 'deb [arch=amd64] https://packages.radiokit.org/packages/linux/ubuntu xenial stable'
