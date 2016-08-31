@@ -19,7 +19,7 @@ Installing package
    a) If you use Ubuntu 14.04 LTS (amd64 architecture)
       ::
 
-            sudo apt-add-repository 'deb [arch=amd64] https://packages.radiokit.org/packages/linux/ubuntu trusty trusty-stable'
+            sudo apt-add-repository 'deb [arch=amd64] http://packages.radiokit.org/packages/linux/ubuntu trusty trusty-stable'
             sudo apt-get update
 
    b) If you use Ubuntu 16.04 LTS (amd64 architecture)
