@@ -1,7 +1,7 @@
 .. _installation-linux-ubuntu-trusty:
 
-Installation on Linux
-#####################
+Installation on Ubuntu 14.04
+############################
 
 Currently the only supported architecture is 64-bit (amd64).
 
