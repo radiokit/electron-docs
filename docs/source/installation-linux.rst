@@ -3,20 +3,31 @@
 Installation on Linux
 #####################
 
-Currently the only supported distribution is Ubuntu 16.04 LTS (amd64 architecture).
+Currently the only supported distributions are Ubuntu 14.04 and 16.04 LTS (amd64 architecture).
 
 Installing package
 ******************
 
-1. Add repository with packages:
+1. Install prerequisities:
    ::
 
         sudo apt-get install apt-transport-https
         sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys 0xD11AA80452796970
-        sudo apt-add-repository 'deb [arch=amd64] https://packages.radiokit.org/packages/linux/ubuntu xenial stable'
-        sudo apt-get update
 
-2. Install package itself:
+2. Add repository:
+   a) If you use Ubuntu 14.04 LTS (amd64 architecture)
+      ::
+
+            sudo apt-add-repository 'deb [arch=amd64] https://packages.radiokit.org/packages/linux/ubuntu trusty trusty-stable'
+            sudo apt-get update
+
+   a) If you use Ubuntu 16.04 LTS (amd64 architecture)
+      ::
+
+           sudo apt-add-repository 'deb [arch=amd64] https://packages.radiokit.org/packages/linux/ubuntu xenial stable'
+           sudo apt-get update
+
+3. Install package itself:
    ::
 
         sudo apt-get install radiokit-electron-1.2
