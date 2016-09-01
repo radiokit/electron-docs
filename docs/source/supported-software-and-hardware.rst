@@ -10,7 +10,8 @@ Intel CPU will work.
 Regarding miniaturized computers, we suggest using `Intel Computing Stick <http://www.intel.com/computestick>`_.
 We have been successfully running Electron on Intel Compute Stick model
 `STCK1A8LFC <http://www.intel.com/content/www/us/en/support/boards-and-kits/intel-compute-stick/intel-compute-stick-stck1a8lfc.html>`_
-(with Atom processor and Ubuntu 14.04) and external USB Sound Card.
+(with Atom processor and Ubuntu 14.04) and external USB Sound Card for making
+bidirectional transmission.
 
 
 Smartphones and tablets
