@@ -1,6 +1,25 @@
 Supported software and hardware
 ===============================
 
+Computers and miniaturized computers
+------------------------------------
+
+Electron is supposed to work on every PC-like platform. Any computer with
+Intel CPU will work.
+
+Regarding miniaturized computers, we suggest using `Intel Computing Stick <http://www.intel.com/computestick>`_.
+We have been successfully running Electron on Intel Compute Stick model
+`STCK1A8LFC <http://www.intel.com/content/www/us/en/support/boards-and-kits/intel-compute-stick/intel-compute-stick-stck1a8lfc.html>`_
+(with Atom processor and Ubuntu 14.04) and external USB Sound Card.
+
+
+Smartphones and tablets
+-----------------------
+
+We are supporting Android-based devices, both if they are using ARM and Intel
+processors.
+
+
 Operating systems
 -----------------
 
@@ -26,8 +45,9 @@ the following virtual sound cards:
 * AXIA IP-Driver for Windows,
 * VoiceMeeter for Windows
 
-Hardware
---------
+
+Hardware Sound Cards
+--------------------
 
 Windows
 ```````
