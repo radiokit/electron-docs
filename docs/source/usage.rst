@@ -43,9 +43,15 @@ Your device will now appear on the Patchbay board. It will look like a blue rect
 Insert the Patchbay code in the Electron client
 ----------------------------------------------------
 
-Open your Electron client on your Android phone or on your Windows system. The welcome screen will ask you to insert the code you have just recived in the previous step.
-Insert the code and click the **Sign in** button. Your client is now active in the Patchbay. Your client will now show you the screen with 2 options, to capture
-or playback the sound. However it will still not be able to transmit audio until you complete the next step.
+Open your Electron client by opening http://localhost:20000 in the web browser
+(Firefox or Chrome) on the computer on which you have installed the application.
+The welcome screen will ask you to insert the code you have just recived in the
+previous step. Insert the code and click the **Sign in** button. Your client
+should authenticate and show up after a while in the Patchbay.
+
+Your client will now show you the screen with 2 ports, to capture or playback
+the sound. However it will still not be able to transmit audio until you
+complete the next step.
 
 Connecting your devices in Patchbay
 ----------------------------------------
