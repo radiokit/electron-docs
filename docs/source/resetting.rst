@@ -23,11 +23,5 @@ Windows
 * Once you open http://localhost:20000 you should see password prompt exactly
   as it looked like after installing the application for the first time.
 
-Android
--------
-
-On Android, you just have to reinstall the application.
-
-
 .. toctree::
    :maxdepth: 2

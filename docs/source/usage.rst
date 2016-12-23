@@ -20,7 +20,7 @@ If you are entering the Patchbay for the first time you will only see white empt
 board. All your devices with Electron client will be shown here after you add them
 to the Patchbay. Note that in order for devices with Electron client to be able
 to communicate with each other you have to add each one of them into the Patchbay.
-A single device with Electron client (example: Androind phone) can not communicate 
+A single device with Electron client (example: Androind phone) can not communicate
 with the system if the system (example: your streaming computer) does not have
 the Electron installed on it as well.
 
@@ -33,7 +33,7 @@ buttons are: Add device, Edit device and Delete (garbage bin icon).
 
 * 1. Click on the **Add device** button. A pop-up screen will come up asking you to name your new device.
 * 2. Insert the name of your new device (example: Journalist one) and click the Add device button.
-Another pop-up screen will come up containg the set up code for your new device as well as the download links to Electron clients.
+Another pop-up screen will come up containg the set up code for your new device.
 
 **Bear in mind that each code is valid for only 15 minutes after which you will have to start the set up again if you need a new working code**
 
